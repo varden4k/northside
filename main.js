@@ -2,6 +2,12 @@ const config = require('./config.js');
 const accept = require('./commands/accept.js');
 let loadstart = new Date();
 
+const low = require('lowdb');
+const FileSync = require('lowdb/adapters/FileSync');
+const fs = require("fs");
+
+const adapter = new FileSync('db.json');
+const db = low(adapter);
 var running = false;
 
 const discord = require('discord.js');
@@ -55,6 +61,9 @@ client.on('message', async message => {
 				let messagecount = parseInt(args[1]);
 				  message.channel.fetchMessages({limit: messagecount}).then(messages => message.channel.bulkDelete(messages));
 				} else { message.channel.send('nie jestes vardenem');}
+				break;
+			case '/testkurwa':
+				 message.channel.send(db.length());
 				break;
 			case '/dodaj':
 				accept.dodawanie(message, args, client);
