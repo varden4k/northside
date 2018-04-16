@@ -2,16 +2,17 @@ const config = require('./config.js');
 const accept = require('./commands/accept.js');
 let loadstart = new Date();
 
+const discord = require('discord.js');
 const low = require('lowdb');
 const FileSync = require('lowdb/adapters/FileSync');
 const fs = require("fs");
+const client = new discord.Client();
 
 const adapter = new FileSync('db.json');
 const db = low(adapter);
+
 var running = false;
 
-const discord = require('discord.js');
-const client = new discord.Client();
 var CronJob = require('cron').CronJob;
 
 const prefix = '/';
