@@ -64,7 +64,7 @@ client.on('message', async message => {
 				} else { message.channel.send('nie jestes vardenem');}
 				break;
 			case '/testkurwa':
-				 message.channel.send(db.length());
+				 message.channel.send(db.length);
 				break;
 			case '/dodaj':
 				accept.dodawanie(message, args, client);
