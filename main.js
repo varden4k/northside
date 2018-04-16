@@ -2,17 +2,10 @@ const config = require('./config.js');
 const accept = require('./commands/accept.js');
 let loadstart = new Date();
 
-const discord = require('discord.js');
-const low = require('lowdb');
-const FileSync = require('lowdb/adapters/FileSync');
-const fs = require("fs");
-const client = new discord.Client();
-
-const adapter = new FileSync('db.json');
-const db = low(adapter);
-
 var running = false;
 
+const discord = require('discord.js');
+const client = new discord.Client();
 var CronJob = require('cron').CronJob;
 
 const prefix = '/';
@@ -62,10 +55,6 @@ client.on('message', async message => {
 				let messagecount = parseInt(args[1]);
 				  message.channel.fetchMessages({limit: messagecount}).then(messages => message.channel.bulkDelete(messages));
 				} else { message.channel.send('nie jestes vardenem');}
-				break;
-			case '/testkurwa':
-				var count = Object.keys(db.reports).length;
-				 message.channel.send(count);
 				break;
 			case '/dodaj':
 				accept.dodawanie(message, args, client);
