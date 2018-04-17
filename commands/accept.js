@@ -7,6 +7,7 @@ let accept = {};
     accept.acccept = (message, client) => {
 	try {
 if (message.channel.id == 433033069147062272) {
+message.delete();
         message.member.addRole('431508241625776128');
         message.member.removeRole('433032769841659904');
 
@@ -40,7 +41,6 @@ if (message.channel.id == 433033069147062272) {
         } catch (e) {
             message.channel.send("error!");
         } finally {
-			message.delete();
             message.channel.stopTyping(true);
         }
 	
