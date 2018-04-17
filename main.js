@@ -69,7 +69,7 @@ client.on('message', async message => {
 				accept.dodawanie(message, args, client);
 				break;
 			case '/testt':
-				var  = db.get('countir')
+				var dopee = db.get('countir')
 			.value()+1;
 				message.channel.send(dopee);
 				break;
