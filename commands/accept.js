@@ -36,7 +36,7 @@ if (message.channel.id == 433033069147062272) {
           const emojiWporzo = message.guild.emojis.find('name', 'wporzo');
           const logi = client.channels.find("id", '433669387677990928')
           logi.send(`@here Dołączył do nas <@${message.author.id}> ${emojiWporzo}`);
-} else { message.reply('wypierdalaj smieszku'); )
+} else { message.reply('wypierdalaj smieszku'); }
         } catch (e) {
             message.channel.send("error!");
         } finally {
