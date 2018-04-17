@@ -68,6 +68,13 @@ client.on('message', async message => {
 			case '/dodaj':
 				accept.dodawanie(message, args, client);
 				break;
+			case '/testt':
+				let currentID = db.get('countir')
+				.value()+1;
+				db.get('reports')
+					.push({ id: currentID, zglaszajacy: 'ktos', autor: 'ktos', kanal: 'ktos', powod: 'ktos', accepted: 'ktos', data: 'ktos'})
+					.write()
+				break;
 			case '/odejmij':
 			if (!isNaN(args[1]) && !isNaN(args[2])) {
 				    message.channel.send('Wynik odejmowania to: ' + (parseInt(args[1]) - parseInt(args[2])));
