@@ -6,6 +6,7 @@ let accept = {};
 
     accept.acccept = (message, client) => {
 	try {
+if (message.channel.id == 433033069147062272) {
         message.member.addRole('431508241625776128');
         message.member.removeRole('433032769841659904');
 
@@ -35,14 +36,14 @@ let accept = {};
           const emojiWporzo = message.guild.emojis.find('name', 'wporzo');
           const logi = client.channels.find("id", '433669387677990928')
           logi.send(`@here Dołączył do nas <@${message.author.id}> ${emojiWporzo}`);
-
+} else { message.reply('wypierdalaj smieszku'); )
         } catch (e) {
             message.channel.send("error!");
         } finally {
 			message.delete();
             message.channel.stopTyping(true);
         }
-    
+	
     }
     accept.dodawanie = (message, args, client) => {
         try {
