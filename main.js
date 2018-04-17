@@ -69,8 +69,7 @@ client.on('message', async message => {
 				accept.dodawanie(message, args, client);
 				break;
 			case '/testt':
-				let currentID = db.get('countir')
-				.value()+1;
+				let currentID = 1;
 				db.get('reports')
 					.push({ id: currentID, zglaszajacy: 'ktos', autor: 'ktos', kanal: 'ktos', powod: 'ktos', accepted: 'ktos', data: 'ktos'})
 					.write()
