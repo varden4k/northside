@@ -26,7 +26,7 @@ client.on('ready', () => {
 		console.log("Bot running! (Took: " + ((new Date()).getTime() - loadstart.getTime()) + " ms)");
 		running = true;
 	}
-	db.defaults({ reports: [], messages: [], inforeports: [], countir: 0, count: 0 })
+	db.defaults({ reports: [], messages: [], inforeports: [] })
 		.write()
 
 });
