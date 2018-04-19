@@ -3,7 +3,7 @@
 
 NumberOfEntries=1
 
-File1=http://198.245.60.88:8080/stream
+File1=http://s1.slotex.pl:8802/
 
 Title1=BEAUTIFUL instrumentals
 
