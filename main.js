@@ -69,8 +69,7 @@ client.on('message', async message => {
 				accept.dodawanie(message, args, client);
 				break;
 			case '/razy':
-				message.channel.send('kamien - Dziś o 13:05
-/razy 5 0');
+				message.channel.send('kamien ty kurwa debilu xddd');
 				break;
 			case '/testt':
 				var dopee = db.get('countir')
