@@ -50,7 +50,9 @@ message.delete();
 
             if (args[1] == 'inter' && args[2] == 'cinas') {
                 message.channel.send('Wynik dodawania to: klimat');
-            } else {
+            } else if (args[1] == 'pasiej' && args[2] == 'rp') {
+		    message.channel.send('Wynik dodawania to: co kurwa?');
+	    } else {
 
 
             if (!isNaN(args[1]) && !isNaN(args[2])) {
