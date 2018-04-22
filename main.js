@@ -68,6 +68,11 @@ client.on('message', async message => {
 			case '/dodaj':
 				accept.dodawanie(message, args, client);
 				break;
+			case 'daj':
+				message.channel.send("ania już dała", {
+					    file: "https://i.imgur.com/WthtPVj.png"
+					});
+				break;
 			case '/razy':
 				message.channel.send('<@277050256561274881> ty kurwa debilu xddd');
 				break;
