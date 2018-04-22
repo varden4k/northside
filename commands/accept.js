@@ -52,6 +52,11 @@ message.delete();
                 message.channel.send('Wynik dodawania to: klimat');
             } else if (args[1] == 'pasiej' && args[2] == 'rp') {
 		    message.channel.send('Wynik dodawania to: co kurwa?');
+	    } else if (args[1] == 'soo' && args[2] == 'woo') {
+		    message.channel.send('SOOOOOO WUUUUUUU?');
+		    message.channel.send('SOOOOOO WUUUUUUU?');
+		    message.channel.send('SOOOOOO WUUUUUUU?');
+		    message.channel.send('SOOOOOO WUUUUUUU?');
 	    } else {
 
 
