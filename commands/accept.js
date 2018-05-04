@@ -65,17 +65,15 @@ let accept = {};
 
         accept.narko = (message, args, client) => {
           try {
-
-		var nCount = parseInt(args[1]);
 		  
-              if (nCount >= 1) {
+              if (args[1] !== "ceny") {
                                
-                if (nCount == 1) {
+                if (args[1] == 1) {
                   var word = "pakiet"
                 } else { var word = "pakietów" }
 
                 message.author.send({
-                  "title": `Cena ${nCount} ${word} to ` + (nCount * 400),
+                  "title": `Cena ${args[1]} ${word} to ` + (parseInt(args[1]) * 400),
                   "color": 9040954
                 })
 		      
