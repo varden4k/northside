@@ -65,21 +65,12 @@ let accept = {};
 
         accept.narko = (message, args, client) => {
           try {
-		  
-              if (args[1] !== "ceny") {
-                               
-                if (args[1] == 1) {
-                  var word = "pakiet"
-                } else { var word = "pakietów" }
-
+		 
                 message.author.send({
                   "title": `Cena ${args[1]} ${word} to ` + (parseInt(args[1]) * 400),
                   "color": 9040954
                 })
-		      
-              } else {
-		      
-		message.author.send({
+		      		message.author.send({
                   "description": "**Ceny sprzedaży:**",
                   "color": 9040954,
                   "fields": [
@@ -129,8 +120,17 @@ let accept = {};
                       "inline": true
                     }
                   ]
-                })		      
+                })
+              } else {
+		      
+		if (args[1] !== "ceny") {
+                               
+                if (args[1] == 1) {
+                  var word = "pakiet"
+                } else { var word = "pakietów" }
+
               }
+	      }
 
               } catch (e) {
                   message.channel.send("error!");
