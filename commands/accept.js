@@ -129,7 +129,7 @@ let accept = {};
 			
 			   message.author.send({
 			  "embed": {
-			  "title": `Za ${args[2]} ${word} zarobisz ` + (parseInt(args[2]) * 85),
+			  "title": `Za ${args[2]} ${word} zarobisz $` + (parseInt(args[2]) * 85),
 			  "color": 9040954
 			  }
 			})
@@ -142,7 +142,7 @@ let accept = {};
 
                 message.author.send({
 			  "embed": {
-			  "title": `Cena ${args[1]} ${word} to ` + (parseInt(args[1]) * 400),
+			  "title": `Cena ${args[1]} ${word} to $` + (parseInt(args[1]) * 400),
 			  "color": 9040954
 			  }
 			})
