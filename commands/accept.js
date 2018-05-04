@@ -65,7 +65,7 @@ let accept = {};
 
         accept.narko = (message, args, client) => {
           try {
-		  message.author.send(args[1]);
+		  message.author.send(args[1] + ' elo');
               if (!args[1]) {
                 message.author.send({
                   "description": "**Ceny sprzedaży:**",
