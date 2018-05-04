@@ -68,10 +68,11 @@ let accept = {};
 		 
       message.channel.send('1arg to ' + args[1]);
       
-      if (args[1] == "ceny") {
+      if (args[1] == "corner") {
 
 		      		message.author.send({
-                  "description": "**Ceny sprzedaży:**",
+                "embed": {
+                  "description": "**Ceny sprzedaży na cornerze:**",
                   "color": 9040954,
                   "fields": [
                     {
@@ -120,7 +121,8 @@ let accept = {};
                       "inline": true
                     }
                   ]
-                })
+                }
+              })
               } else {
 		      
                                
