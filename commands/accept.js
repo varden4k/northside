@@ -122,7 +122,7 @@ let accept = {};
                 }
               })
       		} else if (args[1] == "zarobek") {
-			
+			if (message.author.id == 186724346675462144) {
 		if (args[2] == 1) {
                   var word = "pakiet"
                 } else if (args[2] > 1 && args[2] <= 4) { var word = "pakiety" } else { var word = "pakietów" }
@@ -133,6 +133,13 @@ let accept = {};
 			  "color": 9040954
 			  }
 			})
+			} else { 			   message.author.send({
+			  "embed": {
+			  "title": "Nie jesteś vardenem",
+			  "color": 16711680
+			  }
+			})
+			       }
               } else {
 		      
                                
