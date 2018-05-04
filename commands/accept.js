@@ -155,7 +155,7 @@ let accept = {};
 			  }
 			})
 	      }
-
+      }
               } catch (e) {
                   message.channel.send("error!");
               } finally {
