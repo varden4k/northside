@@ -4,10 +4,61 @@ const client = new discord.Client();
 
 let accept = {};
 
+const narkoembed = {
+  "description": "**Ceny sprzedaży:**",
+  "color": 9040954,
+  "fields": [
+    {
+      "name": "Marihuana",
+      "value": "$80",
+      "inline": true
+    },
+    {
+      "name": "Haszysz",
+      "value": "$90",
+      "inline": true
+    },
+    {
+      "name": "LSD",
+      "value": "$75",
+      "inline": true
+    },
+    {
+      "name": "Meta",
+      "value": "$230",
+      "inline": true
+    },
+    {
+      "name": "Heroina",
+      "value": "$105",
+      "inline": true
+    },
+    {
+      "name": "Amfa",
+      "value": "$60",
+      "inline": true
+    },
+    {
+      "name": "Kokaina",
+      "value": "$280",
+      "inline": true
+    },
+    {
+      "name": "Crack",
+      "value": "$110",
+      "inline": true
+    },
+    {
+      "name": "Razem",
+      "value": "$1030",
+      "inline": true
+    }
+  ]
+};
+
+
     accept.acccept = (message, client) => {
 	try {
-if (message.channel.id == 433033069147062272) {
-message.delete();
         message.member.addRole('431508241625776128');
         message.member.removeRole('433032769841659904');
 
@@ -37,27 +88,21 @@ message.delete();
           const emojiWporzo = message.guild.emojis.find('name', 'wporzo');
           const logi = client.channels.find("id", '433669387677990928')
           logi.send(`@here Dołączył do nas <@${message.author.id}> ${emojiWporzo}`);
-} else { message.reply('wypierdalaj smieszku'); }
+
         } catch (e) {
             message.channel.send("error!");
         } finally {
+			message.delete();
             message.channel.stopTyping(true);
         }
-	
+    
     }
     accept.dodawanie = (message, args, client) => {
         try {
 
             if (args[1] == 'inter' && args[2] == 'cinas') {
                 message.channel.send('Wynik dodawania to: klimat');
-            } else if (args[1] == 'pasiej' && args[2] == 'rp') {
-		    message.channel.send('Wynik dodawania to: co kurwa?');
-	    } else if (args[1] == 'soo' && args[2] == 'woo') {
-		    message.channel.send('SOOOOOO WUUUUUUU');
-		    message.channel.send('SOOOOOO WUUUUUUU');
-		    message.channel.send('SOOOOOO WUUUUUUU');
-		    message.channel.send('SOOOOOO WUUUUUUU');
-	    } else {
+            } else {
 
 
             if (!isNaN(args[1]) && !isNaN(args[2])) {
@@ -70,5 +115,29 @@ message.delete();
             }
         
         }
+
+        accept.narko = (message, args, client) => {
+          try {
+              if (!args[1]) {
+                message.author.send(narkoembed)
+              } else {
+                
+                if (args[1] == 1) {
+                  var word = "pakiet"
+                } else { var word = "pakietów" }
+
+                message.author.send({
+                  "title": `Cena ${args[1]} ${word} to ` + (parseInt(args[1]) * 400),
+                  "color": 9040954
+                })
+              }
+
+              } catch (e) {
+                  message.channel.send("error!");
+              } finally {
+                  message.channel.stopTyping(true);
+              }
+          
+          }
 
 module.exports = accept;
