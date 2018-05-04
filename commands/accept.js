@@ -66,6 +66,8 @@ let accept = {};
         accept.narko = (message, args, client) => {
           try {
 		 
+		  message.channel.send('1arg to ' + args[1]);
+		  
                 message.author.send({
                   "title": `Cena ${args[1]} ${word} to ` + (parseInt(args[1]) * 400),
                   "color": 9040954
