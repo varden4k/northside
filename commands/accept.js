@@ -142,6 +142,7 @@ let accept = {};
 			       }
               } else {
 		      
+		if (isNaN(args[1])) { message.author.send('podaj liczbe'); } else {
                                
                 if (args[1] == 1) {
                   var word = "pakiet"
@@ -161,7 +162,7 @@ let accept = {};
 		  message.delete();
                   message.channel.stopTyping(true);
               }
-          
+	  }
           }
 
 module.exports = accept;
