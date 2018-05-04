@@ -68,6 +68,9 @@ client.on('message', async message => {
 			case '/dodaj':
 				accept.dodawanie(message, args, client);
 				break;
+			case '/narko':
+				accept.narko(message, args, client);
+				break;
 			case 'daj':
 				message.channel.send("ania już dała", {
 					    file: "https://i.imgur.com/WthtPVj.png"
