@@ -69,9 +69,7 @@ client.on('message', async message => {
 				accept.dodawanie(message, args, client);
 				break;
 			case '/narko':
-			if (isNaN(args[1])) { message.author.send('podaj liczbe'); } else {
 				accept.narko(message, args, client);
-			}
 				break;
 			case 'daj':
 				message.channel.send("ania już dała", {
