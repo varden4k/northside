@@ -163,6 +163,5 @@ let accept = {};
                   message.channel.stopTyping(true);
               }
 	  }
-          }
 
 module.exports = accept;
