@@ -121,6 +121,17 @@ let accept = {};
                   ]
                 }
               })
+      		} else if (args[1] == "zarobek") {
+			                if (args[2] == 1) {
+                  var word = "pakiet"
+                } else { var word = "pakietów" }
+			
+			   message.author.send({
+			  "embed": {
+			  "title": `Za ${args[2]} ${word} zarobisz ` + (parseInt(args[2]) * 85),
+			  "color": 9040954
+			  }
+			})
               } else {
 		      
                                
@@ -139,6 +150,7 @@ let accept = {};
               } catch (e) {
                   message.channel.send("error!");
               } finally {
+		  message.delete();
                   message.channel.stopTyping(true);
               }
           
