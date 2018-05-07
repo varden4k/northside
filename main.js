@@ -131,7 +131,7 @@ if (message.author.id == 186724346675462144 || message.author.id == 186833010606
 				message.channel.send('to snitch');
 				break;
 			case 'rozumiem':
-				if (message.channel.id = 433669387677990928) {
+				if (message.channel.id == 433669387677990928) {
 				accept.acccept(message, client);
 				}
 				break;
