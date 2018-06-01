@@ -76,6 +76,11 @@ client.on('message', async message => {
 					    file: "https://i.imgur.com/WthtPVj.png"
 					});
 				break;
+			case 'auto':
+				message.channel.send("silnik otwarty", {
+					    file: "https://i.imgur.com/ToWOwy3.png"
+					});
+				break;
 			case '/razy':
 				message.channel.send('<@277050256561274881> ty kurwa debilu xddd');
 				break;
