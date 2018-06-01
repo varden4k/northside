@@ -77,7 +77,7 @@ client.on('message', async message => {
 					});
 				break;
 			case 'auto':
-				message.channel.send("silnik otwarty", {
+				message.channel.send("silnik otwarte", {
 					    file: "https://i.imgur.com/ToWOwy3.png"
 					});
 				break;
