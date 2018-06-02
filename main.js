@@ -32,36 +32,8 @@ client.on('ready', () => {
 });
 
 client.on('guildMemberAdd', member => {
-
-	member.addRole('431508241625776128');
-
-        member.send({
-            "embed": {
-              "title": "Kilka rzeczy, o których musisz pamiętać.",
-              "color": 6673261,
-              "footer": {
-                "text": "Miłej gry :)"
-              },
-              "fields": [
-                {
-                  "name": "1",
-                  "value": "Na bieżąco kontroluj co dzieje się na kanale #ogłoszenia, jeżeli jesteś nowy zapoznaj się z tym co jest tam napisane, a także zajrzyj w przypięte wiadomości."
-                },
-                {
-                  "name": "2",
-                  "value": "Nigdy, nie pytaj się nikogo kiedy dostaniesz panel, lub nawet czy jesteś blisko do dołączenia tam, takie teksty budują bardzo zły wizerunek."
-                },
-                {
-                  "name": "3",
-                  "value": "Staraj się grać jak najwięcej IC, nie pisz na OOC jeżeli nie musisz."
-                }
-              ]
-            }
-          });
-	
-          const emojiWporzo = message.guild.emojis.find('name', 'wporzo');
-          const logi = client.channels.find("id", '433669387677990928')
-          logi.send(`@here Dołączył do nas <@${member.id}> ${emojiWporzo}`);
+	member.addRole('433032769841659904')
+	accept.acccept(message, client);
 });
 
 client.on('message', async message => {
