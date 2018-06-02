@@ -33,7 +33,6 @@ client.on('ready', () => {
 
 client.on('guildMemberAdd', member => {
 	member.addRole('433032769841659904')
-	accept.acccept(message, client);
 });
 
 client.on('message', async message => {
