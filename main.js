@@ -35,7 +35,7 @@ client.on('guildMemberAdd', member => {
 
 	member.addRole('431508241625776128');
 
-        author.send({
+        member.send({
             "embed": {
               "title": "Kilka rzeczy, o których musisz pamiętać.",
               "color": 6673261,
