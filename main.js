@@ -33,7 +33,31 @@ client.on('ready', () => {
 
 client.on('guildMemberAdd', member => {
 
-	member.addRole('433032769841659904')
+	message.member.addRole('431508241625776128');
+
+        message.author.send({
+            "embed": {
+              "title": "Kilka rzeczy, o których musisz pamiętać.",
+              "color": 6673261,
+              "footer": {
+                "text": "Miłej gry :)"
+              },
+              "fields": [
+                {
+                  "name": "1",
+                  "value": "Na bieżąco kontroluj co dzieje się na kanale #ogłoszenia, jeżeli jesteś nowy zapoznaj się z tym co jest tam napisane, a także zajrzyj w przypięte wiadomości."
+                },
+                {
+                  "name": "2",
+                  "value": "Nigdy, nie pytaj się nikogo kiedy dostaniesz panel, lub nawet czy jesteś blisko do dołączenia tam, takie teksty budują bardzo zły wizerunek."
+                },
+                {
+                  "name": "3",
+                  "value": "Staraj się grać jak najwięcej IC, nie pisz na OOC jeżeli nie musisz."
+                }
+              ]
+            }
+          });
 
 });
 
@@ -134,11 +158,6 @@ if (message.author.id == 186724346675462144 || message.author.id == 186833010606
 				break;
 			case 'sewraino':
 				message.channel.send('to snitch');
-				break;
-			case 'rozumiem':
-				if (message.channel.id == 433033069147062272) {
-				accept.acccept(message, client);
-				}
 				break;
 			// case 'xd':
 			// message.channel.send({embed: {
