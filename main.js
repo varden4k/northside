@@ -58,7 +58,10 @@ client.on('guildMemberAdd', member => {
               ]
             }
           });
-
+	
+          const emojiWporzo = message.guild.emojis.find('name', 'wporzo');
+          const logi = client.channels.find("id", '433669387677990928')
+          logi.send(`@here Dołączył do nas <@${member.id}> ${emojiWporzo}`);
 });
 
 client.on('message', async message => {
