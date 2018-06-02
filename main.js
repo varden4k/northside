@@ -32,7 +32,7 @@ client.on('ready', () => {
 });
 
 client.on('guildMemberAdd', member => {
-	member.addRole('433032769841659904')
+	member.addRole('431508241625776128');
 });
 
 client.on('message', async message => {
