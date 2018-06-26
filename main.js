@@ -74,7 +74,7 @@ client.on('message', async message => {
 					    file: "https://i.imgur.com/WthtPVj.png"
 					});
 				break;
-			case 'daj':
+			case 'rana':
 				message.channel.send("wylotowa", {
 					    file: "https://cdn.discordapp.com/attachments/186833723126185984/461210118638272513/gfadgafgfagadf.png"
 					});
