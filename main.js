@@ -74,7 +74,11 @@ client.on('message', async message => {
 					    file: "https://i.imgur.com/WthtPVj.png"
 					});
 				break;
-			case 'auto':
+			case 'daj':
+				message.channel.send("wylotowa", {
+					    file: "https://cdn.discordapp.com/attachments/186833723126185984/461210118638272513/gfadgafgfagadf.png"
+					});
+				break;			case 'auto':
 				message.channel.send("silnik otwarte", {
 					    file: "https://i.imgur.com/ToWOwy3.png"
 					});
