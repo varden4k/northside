@@ -19,8 +19,8 @@ const prefix = '/';
 
 client.on('ready', () => {
 	    client.user.setActivity('głosu boga', {type: 'LISTENING'});
-	client.user.setUsername("Lem0n");
-	client.user.setAvatar('https://images.vice.com/vice/images/galleries/meta/2014/11/26/la-gang-photos-andres-herren-876-665-1417023573.jpg');
+	client.user.setUsername("Aleksandra Pliszka");
+	client.user.setAvatar('https://i.imgur.com/lan3dtW.png');
 
 	if (running == false) {
 		console.log("Bot running! (Took: " + ((new Date()).getTime() - loadstart.getTime()) + " ms)");
