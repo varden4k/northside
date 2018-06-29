@@ -66,6 +66,18 @@ client.on('message', async message => {
 			case '/dodaj':
 				accept.dodawanie(message, args, client);
 				break;
+			case '/sprobuj':
+				var text = '';
+				for (i = 1; i < args.length; i++) {
+					text += args[i] + ' ';
+				}
+				var liczba = Math.floor(Math.random()*2);
+				if (liczba == 1) {
+				message.channel.send(`<@${message.author.id}> odniósł sukces próbując ${text}`);
+				} else {
+				message.channel.send(`<@${message.author.id}> zawiódł próbując ${text}`);
+				}
+				break;
 			case '/narko':
 				accept.narko(message, args, client);
 				break;
